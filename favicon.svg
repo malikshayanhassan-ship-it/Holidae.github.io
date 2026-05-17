@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- rounded orange background -->
+  <rect width="32" height="32" rx="7" fill="#E07B39"/>
+  <!-- white H — matches the Playfair Display feel with serifs implied by stroke -->
+  <text
+    x="16"
+    y="23"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="21"
+    font-weight="700"
+    fill="#ffffff"
+    text-anchor="middle"
+    dominant-baseline="auto">H</text>
+</svg>

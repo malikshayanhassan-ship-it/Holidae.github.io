@@ -1,0 +1,62 @@
+/* ================================================
+   animations.css
+   Scroll fade-in animations for cards and sections
+   Link this in index.html, packages.html, bali.html
+   ================================================ */
+
+/* ---------- 1. Base hidden state ---------- */
+
+/* Elements start invisible and slightly below position */
+.fade-in {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* When JS adds .visible, they animate in */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ---------- 2. Staggered delay for grid children ---------- */
+
+/* Each card in a grid gets a slightly later delay */
+.fade-in:nth-child(1) { transition-delay: 0.05s; }
+.fade-in:nth-child(2) { transition-delay: 0.15s; }
+.fade-in:nth-child(3) { transition-delay: 0.25s; }
+.fade-in:nth-child(4) { transition-delay: 0.10s; }
+.fade-in:nth-child(5) { transition-delay: 0.20s; }
+.fade-in:nth-child(6) { transition-delay: 0.30s; }
+
+/* ---------- 3. Scroll-to-top button ---------- */
+
+.scroll-top-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--clr-primary);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 46px;
+    height: 46px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.20);
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.3s ease, transform 0.3s ease, background 0.3s ease;
+    z-index: 200;
+    pointer-events: none;
+}
+
+.scroll-top-btn.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.scroll-top-btn:hover {
+    background: var(--clr-primary-dk);
+}

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse Holidae's handpicked holiday packages — from £799. Bali, Santorini, Maldives, Tokyo, Dubai and more. Flights included, ATOL protected.">
+    <title>All Packages – Holidae</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="All Holiday Packages – Holidae">
+    <meta property="og:description" content="Browse our handpicked collection of holiday packages — Bali, Santorini, Maldives, Tokyo, Dubai and more.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://holidae.co.uk/pages/packages.html">
+    <meta property="og:image" content="../images/hero-bg.jpg">
+    <meta property="og:site_name" content="Holidae">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/packages-hero.css">
+    <link rel="stylesheet" href="../css/packages-filter.css">
+    <link rel="stylesheet" href="../css/packages-cards.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/print.css" media="print">
+</head>
+<body>
+
+    <!-- ========== HEADER / NAVIGATION ========== -->
+    
+    <!-- skip link for keyboard users -->
+    <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="../index.html" class="logo">
+                <span class="logo-text">Holidae</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="packages.html" class="nav-link active" aria-current="page">Packages</a></li>
+                <li><a href="bali.html" class="nav-link">Bali Escape</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="faq.html" class="nav-link">FAQ</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+        <div class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="bali.html">Bali Escape</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- ========== PAGE HERO ========== -->
+    <section class="page-hero">
+        <div class="page-hero-content">
+            <h1 class="page-hero-title">All Holiday Packages</h1>
+            <p class="page-hero-sub">Find your perfect getaway from our handpicked collection</p>
+        </div>
+    </section>
+
+    <!-- ========== FILTER BAR ========== -->
+    <section class="filter-section" aria-label="Filter holiday packages">
+        <div class="container">
+            <div class="filter-bar">
+                <div class="filter-group">
+                    <label for="filterDestination">Destination</label>
+                    <select id="filterDestination">
+                        <option value="all">All Destinations</option>
+                        <option value="asia">Asia</option>
+                        <option value="europe">Europe</option>
+                        <option value="middle-east">Middle East</option>
+                        <option value="americas">Americas</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="filterBudget">Max Budget</label>
+                    <select id="filterBudget">
+                        <option value="all">Any Budget</option>
+                        <option value="1000">Under £1,000</option>
+                        <option value="1500">Under £1,500</option>
+                        <option value="2000">Under £2,000</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="filterDuration">Duration</label>
+                    <select id="filterDuration">
+                        <option value="all">Any Length</option>
+                        <option value="short">Up to 5 nights</option>
+                        <option value="medium">6–8 nights</option>
+                        <option value="long">9+ nights</option>
+                    </select>
+                </div>
+                <button class="filter-btn" id="filterBtn">Search Deals</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PACKAGES GRID ========== -->
+    <section class="all-packages" aria-labelledby="packages-heading">
+        <div class="container">
+            <!-- aria-live so screen readers announce filter result counts automatically -->
+            <p class="results-count" id="resultsCount" aria-live="polite">Showing 6 packages</p>
+            <div class="packages-grid" id="packagesGrid">
+
+                <!-- Card 1 – Bali -->
+                <article class="package-card" data-region="asia" data-price="799" data-nights="7">
+                    <div class="card-img-wrap">
+                        <!-- no lazy on the first visible card — it's above the fold -->
+                        <img src="../images/bali.jpg" alt="Bali temple and rice terraces" class="card-img">
+                        <span class="card-badge">Most Popular</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Bali Escape</h3>
+                        <p class="card-location">🌏 Bali, Indonesia</p>
+                        <p class="card-desc">7 nights of paradise — lush temples, stunning beaches and vibrant culture await.</p>
+                        <ul class="card-perks">
+                            <li>✈️ Flights included</li>
+                            <li>🏨 4★ hotel</li>
+                            <li>🍳 Breakfast daily</li>
+                        </ul>
+                        <div class="card-footer">
+                            <span class="card-price">From <strong>£799</strong></span>
+                            <a href="bali.html" class="card-btn">View Deal</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2 – Santorini -->
+                <article class="package-card" data-region="europe" data-price="1049" data-nights="5">
+                    <div class="card-img-wrap">
+                        <img src="../images/santorini.jpg" alt="Santorini white buildings and blue domes" class="card-img" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Santorini Dream</h3>
+                        <p class="card-location">🇬🇷 Santorini, Greece</p>
+                        <p class="card-desc">5 nights in iconic whitewashed villages perched above the sparkling Aegean Sea.</p>
+                        <ul class="card-perks">
+                            <li>✈️ Flights included</li>
+                            <li>🏨 5★ boutique hotel</li>
+                            <li>🌅 Sunset view room</li>
+                        </ul>
+                        <div class="card-footer">
+                            <span class="card-price">From <strong>£1,049</strong></span>
+                            
+                        <a href="santorini.html" class="card-btn">View Deal</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3 – Maldives -->
+                <article class="package-card" data-region="asia" data-price="1599" data-nights="6">
+                    <div class="card-img-wrap">
+                        <img src="../images/maldives.jpg" alt="Maldives overwater bungalows" class="card-img" loading="lazy">
+                        <span class="card-badge badge-luxury">Luxury</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Maldives Luxury</h3>
+                        <p class="card-location">🏝️ Maldives</p>
+                        <p class="card-desc">Overwater bungalows, crystal-clear lagoons and world-class snorkelling for 6 nights.</p>
+                        <ul class="card-perks">
+                            <li>✈️ Flights included</li>
+                            <li>🏨 Overwater villa</li>
+                            <li>🤿 Snorkelling trips</li>
+                        </ul>
+                        <div class="card-footer">
+                            <span class="card-price">From <strong>£1,599</strong></span>
+                            
+                        <a href="maldives.html" class="card-btn">View Deal</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 4 – Dubai -->
+                <article class="package-card" data-region="middle-east" data-price="899" data-nights="5">
+                    <div class="card-img-wrap">
+                        <img src="../images/dubai.jpg" alt="Dubai skyline at night" class="card-img" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Dubai City Break</h3>
+                        <p class="card-location">🇦🇪 Dubai, UAE</p>
+                        <p class="card-desc">5 nights of glamour — iconic skyscrapers, desert safaris and world-class shopping.</p>
+                        <ul class="card-perks">
+                            <li>✈️ Flights included</li>
+                            <li>🏨 5★ city hotel</li>
+                            <li>🏜️ Desert safari</li>
+                        </ul>
+                        <div class="card-footer">
+                            <span class="card-price">From <strong>£899</strong></span>
+                            
+                        <a href="dubai.html" class="card-btn">View Deal</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 5 – Tokyo -->
+                <article class="package-card" data-region="asia" data-price="1299" data-nights="10">
+                    <div class="card-img-wrap">
+                        <img src="../images/tokyo.jpg" alt="Tokyo city lights and Mount Fuji" class="card-img" loading="lazy">
+                        <span class="card-badge badge-new">New</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Tokyo Adventure</h3>
+                        <p class="card-location">🇯🇵 Tokyo, Japan</p>
+                        <p class="card-desc">10 nights exploring neon-lit streets, ancient temples and incredible food culture.</p>
+                        <ul class="card-perks">
+                            <li>✈️ Flights included</li>
+                            <li>🏨 4★ hotel</li>
+                            <li>🚄 Rail pass included</li>
+                        </ul>
+                        <div class="card-footer">
+                            <span class="card-price">From <strong>£1,299</strong></span>
+                            
+                        <a href="tokyo.html" class="card-btn">View Deal</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 6 – New York -->
+                <article class="package-card" data-region="americas" data-price="1199" data-nights="7">
+                    <div class="card-img-wrap">
+                        <img src="../images/newyork.jpg" alt="New York City skyline" class="card-img" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">New York City</h3>
+                        <p class="card-location">🇺🇸 New York, USA</p>
+                        <p class="card-desc">7 nights in the city that never sleeps — Times Square, Central Park and Broadway.</p>
+                        <ul class="card-perks">
+                            <li>✈️ Flights included</li>
+                            <li>🏨 4★ Manhattan hotel</li>
+                            <li>🎭 Broadway show</li>
+                        </ul>
+                        <div class="card-footer">
+                            <span class="card-price">From <strong>£1,199</strong></span>
+                            
+                        <a href="newyork.html" class="card-btn">View Deal</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+            <p class="no-results" id="noResults">
+                😕 No packages match your filters. Try adjusting your search.
+            </p>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="site-footer">
+        <div class="container">
+            <p class="footer-logo">Holidae</p>
+            <p class="footer-tagline">Making holidays affordable for everyone.</p>
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a href="../index.html">Home</a>
+                <a href="packages.html">Packages</a>
+                <a href="bali.html">Bali Escape</a>
+                <a href="contact.html">Contact</a>
+                <a href="faq.html">FAQ</a>
+            </nav>
+            <p class="footer-copy">&copy; 2025 Holidae. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/packagesUI.js"></script>
+    <script src="../js/packages-filter.js"></script>
+    <script src="../js/scroll-to-top.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Holidae — affordable holiday packages to Bali, Santorini, Maldives and more. Book your dream getaway today.">
+    <title>Holidae - Find Your Perfect Holiday</title>
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+    <!-- open graph -->
+    <meta property="og:title" content="Holidae — Find Your Perfect Holiday">
+    <meta property="og:description" content="Affordable holiday packages to Bali, Santorini, Maldives and more. Book your dream getaway today.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://holidae.co.uk/">
+    <meta property="og:image" content="images/hero-bg.jpg">
+    <meta property="og:site_name" content="Holidae">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/testimonials.css">
+    <link rel="stylesheet" href="css/print.css" media="print">
+</head>
+<body>
+
+    <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Holidae</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
+                <li><a href="pages/packages.html" class="nav-link">Packages</a></li>
+                <li><a href="pages/bali.html" class="nav-link">Bali Escape</a></li>
+                <li><a href="pages/contact.html" class="nav-link">Contact</a></li>
+                <li><a href="pages/faq.html" class="nav-link">FAQ</a></li>
+            </ul>
+
+            <button class="hamburger" id="hamburger" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+
+        <div class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pages/packages.html">Packages</a></li>
+                <li><a href="pages/bali.html">Bali Escape</a></li>
+                <li><a href="pages/contact.html">Contact</a></li>
+                <li><a href="pages/faq.html">FAQ</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main id="mainContent">
+
+    <!-- hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Your Next Adventure Starts Here</h1>
+            <p class="hero-subtitle">Browse hundreds of affordable holiday packages, handpicked just for you.</p>
+
+            <form class="search-bar" role="search" aria-label="Search destinations" id="searchForm">
+                <input type="search" placeholder="Where do you want to go?" class="search-input" id="destinationInput" aria-label="Destination">
+                <button class="search-btn" id="searchBtn" type="submit">Search</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- featured packages -->
+    <section class="featured-packages" aria-labelledby="popular-heading">
+        <div class="container">
+            <h2 class="section-title" id="popular-heading">Popular Packages</h2>
+            <p class="section-subtitle">Explore our most loved holiday deals</p>
+
+            <div class="cards-grid">
+
+                <article class="package-card">
+                    <div class="card-img-wrap">
+                        <img src="images/bali.jpg" alt="Bali, Indonesia - rice terraces at sunset" class="card-img" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Bali Escape</h3>
+                        <p class="card-location">🌏 Bali, Indonesia</p>
+                        <p class="card-desc">7 nights of paradise — lush temples, stunning beaches and vibrant culture await.</p>
+                        <div class="card-footer">
+                            <span class="card-price">From <strong>£799</strong></span>
+                            <a href="pages/bali.html" class="card-btn">View Deal</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="package-card">
+                    <div class="card-img-wrap">
+                        <img src="images/santorini.jpg" alt="Santorini, Greece - white buildings and blue domes" class="card-img" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Santorini Dream</h3>
+                        <p class="card-location">🇬🇷 Santorini, Greece</p>
+                        <p class="card-desc">5 nights in iconic whitewashed villages perched above the sparkling Aegean Sea.</p>
+                        <div class="card-footer">
+                            <span class="card-price">From <strong>£1,049</strong></span>
+                            <a href="pages/santorini.html" class="card-btn">View Deal</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="package-card">
+                    <div class="card-img-wrap">
+                        <img src="images/maldives.jpg" alt="Maldives - overwater bungalows and turquoise sea" class="card-img" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Maldives Luxury</h3>
+                        <p class="card-location">🏝️ Maldives</p>
+                        <p class="card-desc">Overwater bungalows, crystal-clear lagoons and world-class snorkelling for 6 nights.</p>
+                        <div class="card-footer">
+                            <span class="card-price">From <strong>£1,599</strong></span>
+                            <a href="pages/packages.html" class="card-btn">View Deal</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- video -->
+    <section class="video-feature">
+        <div class="container">
+            <h2 class="section-title">See the World with Holidae</h2>
+            <p class="section-subtitle">A taste of what's waiting for you</p>
+
+            <div class="video-feature-wrap">
+                <iframe
+                    src="https://www.youtube.com/embed/vy2TecqDi8Q"
+                    title="Holidae — Destination Highlight Reel"
+                    allowfullscreen
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- why choose us -->
+    <section class="why-us">
+        <div class="container">
+            <h2 class="section-title">Why Choose Holidae?</h2>
+
+            <div class="reasons-grid">
+
+                <div class="reason">
+                    <span class="reason-icon">💰</span>
+                    <h3>Best Price Guarantee</h3>
+                    <p>We match any price you find elsewhere, no questions asked.</p>
+                </div>
+
+                <div class="reason">
+                    <span class="reason-icon">✈️</span>
+                    <h3>All-Inclusive Options</h3>
+                    <p>Flights, hotels, and transfers — all bundled into one simple package.</p>
+                </div>
+
+                <div class="reason">
+                    <span class="reason-icon">🛡️</span>
+                    <h3>Fully Protected</h3>
+                    <p>Every booking is ATOL protected so your money is always safe.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Travellers Say</h2>
+            <p class="section-subtitle">Real reviews from real Holidae customers</p>
+
+            <div class="testimonials-grid">
+
+                <article class="testimonial-card">
+                    <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                    <blockquote class="testimonial-quote">
+                        "Booked the Bali Escape on a whim and it was hands down the best holiday I've ever had."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" aria-hidden="true">SC</div>
+                        <div>
+                            <p class="testimonial-name">Sophie C.</p>
+                            <span class="testimonial-trip">Bali Escape · 2024</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="testimonial-card">
+                    <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                    <blockquote class="testimonial-quote">
+                        "The Santorini package was flawless from start to finish. The sunset view room was absolutely breathtaking — we didn't want to leave."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar teal" aria-hidden="true">JM</div>
+                        <div>
+                            <p class="testimonial-name">James M.</p>
+                            <span class="testimonial-trip">Santorini Dream · 2024</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="testimonial-card">
+                    <div class="testimonial-stars" aria-label="4 out of 5 stars">★★★★☆</div>
+                    <blockquote class="testimonial-quote">
+                        "Holidae made everything so easy. We were nervous first-time international travellers but the team were there every step of the way."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar dark" aria-hidden="true">PK</div>
+                        <div>
+                            <p class="testimonial-name">Priya K.</p>
+                            <span class="testimonial-trip">Dubai City Break · 2025</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="trust-bar">
+                <p>Rated <strong>4.9 / 5</strong> from over <strong>2,400 verified reviews</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p class="footer-logo">Holidae</p>
+            <p class="footer-tagline">Making holidays affordable for everyone.</p>
+
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a href="index.html">Home</a>
+                <a href="pages/packages.html">Packages</a>
+                <a href="pages/bali.html">Bali Escape</a>
+                <a href="pages/contact.html">Contact</a>
+                <a href="pages/faq.html">FAQ</a>
+            </nav>
+
+            <p class="footer-copy">&copy; 2025 Holidae. All rights reserved.</p>
+        </div>
+    </footer>
+
+    </main>
+
+    <script src="js/main.js"></script>
+    <script src="js/scroll-to-top.js"></script>
+
+</body>
+</html>

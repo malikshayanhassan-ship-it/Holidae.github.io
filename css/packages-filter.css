@@ -1,0 +1,101 @@
+/* ================================================
+   packages-filter.css
+   Sticky filter bar styles for packages.html
+   ================================================ */
+
+.filter-section {
+    background: var(--clr-white);
+    border-bottom: 1px solid var(--clr-border);
+    padding: 1.5rem 0;
+    position: sticky;
+    top: 68px;
+    z-index: 50;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: flex-end;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    flex: 1;
+    min-width: 160px;
+}
+
+.filter-group label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--clr-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.filter-group select {
+    padding: 0.65rem 0.9rem;
+    border: 1px solid var(--clr-border);
+    border-radius: 8px;
+    font-family: var(--ff-body);
+    font-size: 0.93rem;
+    color: var(--clr-dark);
+    background: var(--clr-light);
+    cursor: pointer;
+    transition: border-color var(--transition);
+}
+
+.filter-group select:focus {
+    outline: none;
+    border-color: var(--clr-primary);
+}
+
+.filter-btn {
+    background: var(--clr-primary);
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1.6rem;
+    border-radius: 50px;
+    font-family: var(--ff-body);
+    font-size: clamp(0.88rem, 2vw, 0.95rem);
+    font-weight: 700;
+    cursor: pointer;
+    transition: background var(--transition), transform var(--transition);
+    white-space: nowrap;
+    align-self: flex-end;
+    min-height: 44px; /* accessible touch target */
+}
+
+.filter-btn:hover {
+    background: var(--clr-primary-dk);
+    transform: scale(1.03);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .filter-section {
+        top: 68px;
+        padding: 1rem 0;
+    }
+
+    .filter-bar {
+        gap: 0.75rem;
+    }
+
+    .filter-group {
+        min-width: 140px;
+    }
+}
+
+@media (max-width: 600px) {
+    .filter-section {
+        position: static;
+    }
+
+    .filter-group {
+        min-width: 100%;
+    }
+}

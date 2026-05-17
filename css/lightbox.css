@@ -1,0 +1,162 @@
+/* ================================================
+   Holidae – lightbox.css
+   Full-screen image lightbox overlay
+   Used on bali.html gallery — Day 7 addition
+   ================================================ */
+
+/* ---------- 1. Overlay Backdrop ---------- */
+
+/* Fixed overlay that covers the entire viewport.
+   Hidden by default — JS adds .active to show it. */
+.lightbox-overlay {
+    position: fixed;
+    inset: 0; /* shorthand for top/right/bottom/left: 0 */
+    background: rgba(0, 0, 0, 0.92);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+
+    /* hidden state */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* JS toggles this class to show/hide the lightbox */
+.lightbox-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ---------- 2. Inner Container ---------- */
+
+.lightbox-inner {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    /* scale in from slightly smaller for a smooth reveal */
+    transform: scale(0.92);
+    transition: transform 0.3s ease;
+}
+
+.lightbox-overlay.active .lightbox-inner {
+    transform: scale(1);
+}
+
+/* ---------- 3. Main Lightbox Image ---------- */
+
+.lightbox-img {
+    max-height: 80vh;
+    max-width: 100%;
+    width: auto;
+    border-radius: var(--radius);
+    object-fit: contain;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    display: block;
+}
+
+/* ---------- 4. Caption ---------- */
+
+.lightbox-caption {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.9rem;
+    text-align: center;
+    font-style: italic;
+}
+
+/* ---------- 5. Close Button ---------- */
+
+.lightbox-close {
+    position: absolute;
+    top: -3rem;
+    right: 0;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0.3rem 0.5rem;
+    border-radius: 6px;
+    transition: color var(--transition), background var(--transition);
+    min-height: 44px; /* accessible touch target */
+    min-width: 44px;
+}
+
+.lightbox-close:hover {
+    color: var(--clr-primary);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* ---------- 6. Prev / Next Navigation Arrows ---------- */
+
+/* Buttons sit on the left and right edges of the lightbox inner */
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    color: #fff;
+    font-size: 1.4rem;
+    cursor: pointer;
+    padding: 0.6rem 0.8rem;
+    border-radius: 8px;
+    line-height: 1;
+    transition: background var(--transition), color var(--transition);
+    min-height: 44px;
+    min-width: 44px;
+}
+
+.lightbox-prev { left: -3.5rem; }
+.lightbox-next { right: -3.5rem; }
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background: var(--clr-primary);
+    border-color: var(--clr-primary);
+}
+
+/* ---------- 7. Image Counter Indicator ---------- */
+
+/* e.g. "2 / 3" shown below the image */
+.lightbox-counter {
+    color: rgba(255, 255, 255, 0.50);
+    font-size: 0.82rem;
+    letter-spacing: 0.5px;
+}
+
+/* ---------- 8. Responsive ---------- */
+
+/* On mobile there's no room for side arrows — move them below the image */
+@media (max-width: 640px) {
+    .lightbox-prev,
+    .lightbox-next {
+        position: static;
+        transform: none;
+    }
+
+    /* Row of controls under the image */
+    .lightbox-controls {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .lightbox-img {
+        max-height: 65vh;
+        border-radius: 10px;
+    }
+
+    .lightbox-close {
+        top: -2.5rem;
+    }
+}

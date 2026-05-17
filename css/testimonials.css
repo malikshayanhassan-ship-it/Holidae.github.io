@@ -1,0 +1,169 @@
+/* ================================================
+   Holidae – testimonials.css
+   Testimonials section styles for index.html
+   Day 7 addition
+   ================================================ */
+
+/* ---------- 1. Section Wrapper ---------- */
+
+/* Dark background creates visual contrast after the light-themed cards section */
+.testimonials {
+    padding: 5rem 0;
+    background: var(--clr-dark);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle decorative radial gradients — adds depth without extra images */
+.testimonials::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(circle at 18% 55%, rgba(224, 123, 57, 0.09) 0%, transparent 55%),
+        radial-gradient(circle at 82% 20%, rgba(26, 107, 114, 0.09) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+/* Override section heading colours — white needed on dark background */
+.testimonials .section-title   { color: #fff; }
+.testimonials .section-subtitle { color: rgba(255, 255, 255, 0.60); }
+
+/* ---------- 2. Three-Column Card Grid ---------- */
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    position: relative;
+    z-index: 1; /* sits above the ::before decorative layer */
+}
+
+/* ---------- 3. Individual Testimonial Card ---------- */
+
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: var(--radius);
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: background var(--transition), border-color var(--transition),
+                transform var(--transition);
+    backdrop-filter: blur(8px); /* frosted-glass feel */
+}
+
+.testimonial-card:hover {
+    background: rgba(255, 255, 255, 0.10);
+    border-color: rgba(224, 123, 57, 0.40);
+    transform: translateY(-5px);
+}
+
+/* Unicode star rating — amber colouring */
+.testimonial-stars {
+    color: #f5b942;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+/* Quote text — italic with a branded left accent bar */
+.testimonial-quote {
+    font-size: 0.96rem;
+    color: rgba(255, 255, 255, 0.80);
+    line-height: 1.8;
+    flex: 1; /* pushes author row to bottom */
+    font-style: italic;
+    position: relative;
+    padding-left: 1.1rem;
+}
+
+/* 3px orange bar — reinforces brand colour inside the dark section */
+.testimonial-quote::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.2em;
+    bottom: 0.2em;
+    width: 3px;
+    background: var(--clr-primary);
+    border-radius: 2px;
+    opacity: 0.75;
+}
+
+/* Author row — avatar + name + trip label */
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: auto;
+}
+
+/* Initials avatar circle — colour varies per card for visual distinction */
+.testimonial-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--clr-primary);
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-family: var(--ff-display);
+}
+
+.testimonial-avatar.teal { background: var(--clr-accent); }
+.testimonial-avatar.dark { background: #555; }
+
+.testimonial-name {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.3;
+}
+
+.testimonial-trip {
+    font-size: 0.77rem;
+    color: rgba(255, 255, 255, 0.45);
+    display: block;
+}
+
+/* ---------- 4. Trust Bar ---------- */
+
+/* Aggregate rating line — social proof at a glance */
+.trust-bar {
+    margin-top: 3rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.trust-bar p {
+    font-size: 0.92rem;
+    color: rgba(255, 255, 255, 0.50);
+}
+
+.trust-bar strong { color: var(--clr-primary); }
+
+/* ---------- 5. Responsive Breakpoints ---------- */
+
+/* Tablet — two columns */
+@media (max-width: 900px) {
+    .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Mobile — single column, reduced padding */
+@media (max-width: 600px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .testimonials { padding: 3.5rem 0; }
+}
